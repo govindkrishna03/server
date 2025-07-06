@@ -1,2 +1,5 @@
 flask
-pillow
+opencv-python-headless
+fer
+Pillow
+numpy

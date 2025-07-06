@@ -4,6 +4,7 @@ from flask import Flask, request
 from PIL import Image
 import io
 import random
+import os
 
 app = Flask(__name__)
 
@@ -16,3 +17,8 @@ def detect_emotion():
     # Dummy classification - randomly pick an emotion
     detected = random.choice(emotions)
     return detected
+
+
+if __name__ == '__main__':
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
